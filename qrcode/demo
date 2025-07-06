@@ -1,0 +1,12 @@
+# QR Code Generator Assignment
+import qrcode
+
+def main():
+    data = input("Enter the text or URL to encode in the QR code: ")
+    img = qrcode.make(data)
+    filename = input("Enter the filename to save the QR code image (e.g., 'qrcode.png'): ")
+    img.save(filename)
+    print(f"QR code saved as {filename}")
+
+if __name__ == "__main__":
+    main()
